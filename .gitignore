@@ -3,4 +3,4 @@ build/
 dist/
 macli.spec
 venv/
-
+*.pyc
