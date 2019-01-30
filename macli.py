@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+from sys import exit
 from os import environ
 from marathon import MarathonClient, MarathonApp
 from marathon.exceptions import *
