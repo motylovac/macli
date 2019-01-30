@@ -1,4 +1,6 @@
 #!/usr/bin/python
+from __future__ import print_function
+from builtins import str
 from sys import exit
 from os import environ
 from marathon import MarathonClient, MarathonApp
@@ -14,8 +16,9 @@ from termcolor import colored
 
 class mPrinter(pprint.PrettyPrinter):
     def format(self, object, context, maxlevels, level):
-        if isinstance(object, unicode):
+        if isinstance(object, bytes):
             return (object.encode('utf8'), True, False)
+
         return pprint.PrettyPrinter.format(self, object, context, maxlevels,
                                            level)
 

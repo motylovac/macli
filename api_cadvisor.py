@@ -1,12 +1,14 @@
 #!/usr/bin/python
 
+from builtins import str
+from builtins import object
 import requests
 import json
 import dateutil.parser
 import pprint
 
 
-class CadvisorContainer:
+class CadvisorContainer(object):
     data = {}
     mesos_id = ""
     cpu_usage = 0.0
@@ -48,7 +50,7 @@ class CadvisorContainer:
 #    self.req_data(url)
 
 
-class Cadvisor:
+class Cadvisor(object):
     url = ""
     machine = {}
     host = CadvisorContainer()
